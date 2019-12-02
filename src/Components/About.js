@@ -13,7 +13,7 @@ export default class About extends Component {
                         West Jakarta, Indonesia · <a href="tel:+6282257351669">+6282257351669</a> · <a href="mailto:e.p.hastono@gmail.com">e.p.hastono@gmail.com</a>
                     </div>
                     <p className="lead mb-5">
-                        Supervisor IT Development at PT Bhanda Ghara Reksa (Persero), with 1+ years experience as backend developer. Currently pursuing Masters in Computer Science  with interest in Blockchain and developing capabilities as full-stack programmer.
+                        Supervisor IT Development at PT Bhanda Ghara Reksa (Persero), with 1+ years experience as backend developer. Currently pursuing Masters in Information Technology with interest in Blockchain and developing capabilities as full-stack programmer.
                     </p>
                     <div className="social-icons">
                         <a href="https://www.linkedin.com/in/emmanoel-hastono-603906aa" target="_blank" rel="noopener noreferrer">

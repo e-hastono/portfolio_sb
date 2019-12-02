@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTrophy } from '@fortawesome/free-solid-svg-icons'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faTrophy } from '@fortawesome/free-solid-svg-icons'
 
 export default class Awards extends Component {
     render() {
@@ -8,7 +8,7 @@ export default class Awards extends Component {
             <section className="resume-section p-3 p-lg-5 d-flex align-items-center" id="awards">
                 <div className="w-100">
                     <h2 className="mb-5">Awards &amp; Certifications</h2>
-                    <ul className="fa-ul mb-0">
+                    {/* <ul className="fa-ul mb-0">
                         <li>
                             <FontAwesomeIcon icon={faTrophy} className="fa-li fa text-warning" />
                             Google Analytics Certified Developer
@@ -36,7 +36,7 @@ export default class Awards extends Component {
                             <FontAwesomeIcon icon={faTrophy} className="fa-li fa text-warning" />
                             3<sup>rd</sup> Place - James Buchanan High School - Hackathon 2005
                         </li>
-                    </ul>
+                    </ul> */}
                 </div>
             </section>
         )
