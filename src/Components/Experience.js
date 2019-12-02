@@ -1,55 +1,54 @@
 import React, { Component } from 'react'
 
 export default class Experience extends Component {
+    constructor(props) {
+        super(props)
+    
+        this.state = {
+            experiences: [
+                {
+                    title: "Supervisor IT Development",
+                    company: "PT Bhanda Ghara Reksa (Persero)",
+                    description: "Collaborating within the IT division in developing various applications and systems to contribute to the company's vision of digitalised logistics and warehousing",
+                    period: "July 2019 - Present"
+                },
+                {
+                    title: "Backend Developer",
+                    company: "PT Qareer Harapan Asia",
+                    description: "Contributing mainly to the improvement of Jobs.id CodeIgniter/Laravel-powered backend technology, with also works on the frontend aspect and the Golang API microservices",
+                    period: "November 2018 - July 2019"
+                },
+                {
+                    title: "IT Support",
+                    company: "PT Sumber Inti Pangan",
+                    description: "Provide technical support for the main office of the food company in terms of troubleshooting devices such as printers, computers, and routers; English and Indonesian translations of documents from partner companies, organisations and goverments; and designing visual illustrations such as posters and labels",
+                    period: "February 2018 - November 2019"
+                },
+            ]
+        }
+    }
+
     render() {
+        var experiences = this.state.experiences.map(experience => {
+            return (
+                <div key={experience.title} className="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div className="resume-content">
+                        <h3 className="mb-0">{experience.title}</h3>
+                        <div className="subheading mb-3">{experience.company}</div>
+                        <p>{experience.description}</p>
+                    </div>
+                    <div className="resume-date text-md-right">
+                        <span className="text-primary">{experience.period}</span>
+                    </div>
+                </div>
+            )
+        })
+
         return (
             <section className="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
                 <div className="w-100">
                     <h2 className="mb-5">Experience</h2>
-
-                    <div className="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div className="resume-content">
-                            <h3 className="mb-0">Senior Web Developer</h3>
-                            <div className="subheading mb-3">Intelitec Solutions</div>
-                            <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
-                        </div>
-                        <div className="resume-date text-md-right">
-                            <span className="text-primary">March 2013 - Present</span>
-                        </div>
-                    </div>
-
-                    <div className="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div className="resume-content">
-                            <h3 className="mb-0">Web Developer</h3>
-                            <div className="subheading mb-3">Intelitec Solutions</div>
-                            <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
-                        </div>
-                        <div className="resume-date text-md-right">
-                            <span className="text-primary">December 2011 - March 2013</span>
-                        </div>
-                    </div>
-
-                    <div className="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div className="resume-content">
-                            <h3 className="mb-0">Junior Web Designer</h3>
-                            <div className="subheading mb-3">Shout! Media Productions</div>
-                            <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
-                        </div>
-                        <div className="resume-date text-md-right">
-                            <span className="text-primary">July 2010 - December 2011</span>
-                        </div>
-                    </div>
-
-                    <div className="resume-item d-flex flex-column flex-md-row justify-content-between">
-                        <div className="resume-content">
-                            <h3 className="mb-0">Web Design Intern</h3>
-                            <div className="subheading mb-3">Shout! Media Productions</div>
-                            <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
-                        </div>
-                        <div className="resume-date text-md-right">
-                            <span className="text-primary">September 2008 - June 2010</span>
-                        </div>
-                    </div>
+                    {experiences}                    
                 </div>
             </section>
         )
